@@ -1,0 +1,49 @@
+{
+  "name": "dsh-subagent-model-switch",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "让子代理按指定模型启动：用户口述模型名，AI 派发子代理时自动带上 model/思考强度。同一份包同时提供 ZCode 插件（hooks + agents + commands）与 dsh 插件（cordis bundle）。",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./lib/resolve.js": "./lib/resolve.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "cordis.patch.yml",
+    "zcode",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "zcode",
+    "zcode-plugin",
+    "subagent",
+    "model-switch"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/dsh-tools": "*",
+    "@deepseek-ai/dsh-llm": "*",
+    "@deepseek-ai/dsh-subagent": "*"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": { "optional": true },
+    "@deepseek-ai/dsh-tools": { "optional": true },
+    "@deepseek-ai/dsh-llm": { "optional": true },
+    "@deepseek-ai/dsh-subagent": { "optional": true }
+  },
+  "license": "MIT"
+}

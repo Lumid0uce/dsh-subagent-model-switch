@@ -1,0 +1,14 @@
+{
+  "name": "subagent-model-switch",
+  "description": "让子智能体 / 子代理按用户点名的模型运行：DSH 与 ZCode 通用的一份实现。",
+  "plugins": [
+    {
+      "name": "subagent-model-switch",
+      "source": "./zcode",
+      "description": "识别对话里点名的模型，派发子智能体时自动换成固定运行在该模型上的适配器定义。",
+      "version": "0.1.0",
+      "category": "agents",
+      "tags": ["subagent", "model", "glm", "hooks"]
+    }
+  ]
+}

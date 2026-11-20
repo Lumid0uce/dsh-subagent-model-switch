@@ -1,0 +1,8 @@
+# dsh-subagent-model-switch bundle patch.
+#
+# 一行 insert 挂载 Host 半身（Node 侧）：注册 `subagent_model` / `subagent_models`
+# 两个工具，并往 system prompt 注入「用户点名模型时必须带 model」的规则。
+- insert:
+    - id: subagent-model-switch
+      name: 'dsh-subagent-model-switch'
+      config: {}

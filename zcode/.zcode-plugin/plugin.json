@@ -1,0 +1,27 @@
+{
+  "name": "subagent-model-switch",
+  "version": "0.1.0",
+  "description": "让子智能体按用户点名的模型运行：从「用 GLM-5.3 开个子代理」这类话里认出模型，派发时自动换成固定运行在该模型上的子智能体。与 dsh 插件 dsh-subagent-model-switch 同一份设计。",
+  "author": {
+    "name": "Xiaohan Workspace"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/Lumid0uce/dsh-subagent-model-switch",
+  "keywords": [
+    "subagent",
+    "model",
+    "model-switch",
+    "agent",
+    "zcode"
+  ],
+  "commands": "./commands",
+  "userConfig": {
+    "defaultModel": {
+      "type": "string",
+      "title": "默认子智能体模型",
+      "description": "没有在对话里点名模型时，子智能体固定使用的模型 id（留空 = 跟随主会话模型）。",
+      "default": "",
+      "required": false
+    }
+  }
+}
